@@ -25,6 +25,9 @@ from transformers import CLIPProcessor, CLIPModel, pipeline
 import sys
 import json
 
+import torch
+print(torch.__version__)
+
 # Load CLIP model and processor
 clip_model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
 clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
