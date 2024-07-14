@@ -51,3 +51,22 @@ Usage
 Upload PDFs: Users can upload PDF documents to the application.
 Semantic Search: Users can perform searches on the uploaded PDFs using natural language queries.
 Ask Questions: Users can ask questions related to the content of the uploaded PDFs and get precise answers.
+
+
+On live deployment for running python script do folowing step:
+Here’s a step-by-step guide assuming you are using Render for deployment:
+
+1. Create a requirements.txt file:
+    transformers
+
+2. Update your Render build and start scripts:
+
+In the Render dashboard, go to your service settings and configure the build and start commands to include installing Python dependencies.
+
+For example:
+Build Command: pip install -r requirements.txt && npm install
+Start Command: npm start
+
+3. Redeploy your application:
+
+After making these changes, redeploy your application on Render. This should ensure that the transformers module is installed in the Python environment used by your script.
